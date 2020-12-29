@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Tab name -->
+    <title>Lindsey's Portfolio</title>
+</head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Set style for body */
+body, html {
+	margin: 0;
+	font-family: Candara;
+	padding: 0px;
+}
+
+/* Style background of body */
+.bg {
+	background-image: url("y-so-serious.png");
+	background-position: center;
+}
+
+/* Header Section*/
+.header {
+  padding-top: 10px;
+  text-align: center;
+  background-image: url("y-so-serious-white.png");
+}
+
+/* Header content styling */
+.header h1 {
+	font-size: 80px;
+	font-style: italic;
+	letter-spacing: 10px;
+	font-family: Vivaldi;
+	margin-bottom:0px;
+	margin-top: 0px;
+}
+
+/* Styling of top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  margin: 0px;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style header card for sections */
+.headcard {
+	width: 60%;
+	height: 80px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px;
+	font-size:20px; 
+	text-align:center;
+	color: white;
+}
+
+/* Style main card for sections */
+.card {
+  background-image: url("y-so-serious-white.png");
+  padding: 20px;
+  width: 70%;
+  margin: auto;
+  border-color: black;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 30px;
+}
+
+/* Style text-wrap image for About section */
+.textwrap {
+	display: block;
+	margin: 15px;
+	float: right;
+	width: 250px;
+	border-radius: 125px 125px 125px 125px;
+	border-style: solid;
+	border-color: white;
+	border-width: 5px;
+}
+
+/* Style github link button for Projects section */
+.centre {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: auto;
+	padding: 3px;
+}
+
+/* Sizing and centralising for images
+in Skills and Contact sections */
+figure {
+	padding: 4px;
+	margin-top: 5px;
+	height: 64px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Table styling in "main" cards */
+table {
+	border-spacing: 0;
+	width: 95%;
+	height: 95%;
+	min-width: 150px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Cell style for icon in table */	
+.a {
+	width: auto;
+	background-color: white;
+	height: auto;
+	text-align: center;
+	vertical-align: center;
+	border-radius: 10px 10px 0px 0px;
+	border-top-style: groove;
+	border-left-style: groove;
+	border-right-style: groove;
+	border-color: #323232
+	padding: 3px;
+}
+
+/* Cell style for text in table */	
+.b {
+	width: 150px;
+	text-align: center;
+	font-size: 18px;
+	color: white;
+	height: 40px;
+	margin-bottom: 20px;
+	border-radius: 0px 0px 10px 10px;
+	background-image: url("y-so-serious.png");
+	border-bottom-style: groove;
+	border-left-style: groove;
+	border-right-style: groove;
+	border-color: #323232;
+	padding: 3px;
+}
+
+/* Cell style for gap in table */	
+.c {
+	width: 10px;
+	min-width: 10px;
+	min-height: 10px;
+	height: 10px;
+}
+
+/* Cell styling for icon of github link table */
+.d {
+	width: 50px;
+	background-color: white;
+	height: auto;
+	text-align: center;
+	vertical-align: center;
+	border-radius: 10px 10px 0px 0px;
+	border-top-style: groove;
+	border-left-style: groove;
+	border-right-style: groove;
+	border-color: #323232
+	padding: 3px;
+}
+
+/* Cell styling for link of github link table */
+.e {
+	width: 50px;
+	text-align: center;
+	font-size: 18px;
+	color: white;
+	height: 40px;
+	margin-bottom: 20px;
+	border-radius: 0px 0px 10px 10px;
+	background-image: url("y-so-serious.png");
+	border-bottom-style: groove;
+	border-left-style: groove;
+	border-right-style: groove;
+	border-color: #323232;
+	padding: 3px;
+}
+
+/* Cell style for image in table (Experience/Projects) */	
+.expimage {
+	width:auto; 
+	height:auto; 
+	border-bottom-style:groove;
+	border-top-style:groove;
+	border-left-style:groove;
+	border-radius: 10px 0px 0px 10px;
+	text-align: center;
+	vertical-align: center;
+	padding: 5px;
+}
+
+/* Cell style for heading in table (Experience/Projects) */
+.expheader {
+	font-size:18px; 
+	height:20px;
+	border-top-style:groove;
+	border-right-style:groove;
+	border-left-style:groove;
+	border-radius: 0px 10px 0px 0px;
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+	border-color: black;
+	color: white;
+	background-image: url("y-so-serious.png");
+}
+
+/* Cell style for left subheading in table (Experience/Projects) */
+.expsubhead1 {
+	font-size:16px;
+	text-align:left;
+	width:150px;	
+	height:17px;
+	border-left-style:groove;
+	font-style: italic;
+	padding-left: 5px;
+	padding-bottom: 5px;
+	border-color: black;
+	color: white;
+	background-image: url("y-so-serious.png");
+}
+
+/* Cell style for right subheading in table (Experience/Projects) */
+.expsubhead2 {
+	text-align: right; 
+	font-style: italic;
+	border-right-style:groove;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	border-color: black;
+	color: white;
+	background-image: url("y-so-serious.png");
+}
+
+/* Cell style for main summary in table (Experience/Projects) */
+.expmain {
+	font-size:16px;
+	border-right-style:groove;
+	border-bottom-style:groove;
+	border-left-style:groove;
+	border-radius: 0px 0px 10px 0px;
+	padding: 5px;
+	background-color: white;
+}	
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background-image: url("y-so-serious-white.png");
+  margin-top: 10px;
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <h1>Lindsey Benjamin</h1>
+  <p style="font-family:Vivaldi; text-align:center; margin-top:2px; margin-bottom:5px; font-size:40px">My Portfolio</p>
+</div>
+<!-- Nav bar -->
+<div class="topnav">
+	<a href="#ContactMe" style="float:right">Contact</a>
+	<a href="#MyProjects" style="float:right">Projects</a>
+	<a href="#Experience" style="float:right">Experience</a>
+	<a href="#Education" style="float:right">Education</a>
+	<a href="#MySkills" style="float:right">Skills</a>
+	<a href="#AboutMe" style="float:right">About</a>
+</div>
+<div class="bg">
+<!-- Body -->
+<div class="row">
+	<!-- About me -->
+	<div class="headcard">
+		<h2 id="AboutMe" >About Me</h2>
+	</div>
+	<div class="card">
+		<img src = "profile2.jpg" alt="Lindsey Benjamin" class="textwrap">
+		<br>
+		<p style="font-size:18px">
+		Hi! My name is <b>Lindsey</b>. I am an aspiring Software Developer who is passionate about 
+		pursuing a career in the tech industry, with the intent to apply and expand current 
+		problem-solving and critical thinking skills in space which encourages innovation 
+		and collaboration. 
+		<br>
+		<br>
+		As someone who is highly focussed and attentive to detail, I thrive on building quality systems 
+		that surpass end users' expectations. I am excited to have the opportunity to integrate 
+		my current experience and skills with problem-solving, critical thinking, customer focus 
+		and continuous improvement with my newly acquired skills as a budding Software Developer. 
+		</p>
+		<p style="font-size:18px; text-align: left">
+		<b>Find my CV here: <a href="LB-CV.pdf" target="blank">L Benjamin - CV</a></b>
+		</p>
+	</div>
+	
+	<!-- My Skills -->
+	<div class="headcard">
+		<h2 id="MySkills">Skills</h2>
+	</div>
+	<div class="card">
+		<table>
+			<tbody>
+				<tr>
+					<td class="a">
+						<img src = "java.png" alt="Java">
+					</td>
+					<td class="c"></td>
+					<td class="a">
+						<img src = "python.png" alt="Python">
+					</td>
+					<td class="c"></td>
+					<td class="a">				
+						<img src = "html.png" alt="HTML">
+					</td>
+					<td class="c"></td>
+					<td class="a">
+							<img src = "css3.png" alt="CSS">
+					</td>
+					<td class="c"></td>
+					<td class="a">
+						<img src = "git.png" alt="Git">
+					</td>
+				</tr>
+				<tr>
+					<td class="b">Java</td>
+					<td class="c"></td>
+					<td class="b">Python</td>
+					<td class="c"></td>
+					<td class="b">HTML</td>
+					<td class="c"></td>
+					<td class="b">CSS</td>
+					<td class="c"></td>
+					<td class="b">Git</td>
+				</tr>
+				<tr>
+					<td class="c"></td>
+					<td class="c"></td>
+					<td class="c"></td>
+					<td class="c"></td>
+					<td class="c"></td>
+					<td class="c"></td>
+					<td class="c"></td>
+					<td class="c"></td>
+					<td class="c"></td>
+				</tr>
+				<tr>
+					<td class="a">
+						<img src = "machlearn.png" alt="Machine Learning">
+					</td>
+					<td class="c"></td>
+					<td class="a">
+						<img src = "jdbc.png" alt="JDBC">
+					</td>
+					<td class="c"></td>
+					<td class="a">
+						<img src = "github.png" alt="Github">
+					</td>
+					<td class="c"></td>
+					<td class="a">
+						<img src = "junit.png" alt="JUnit Testing">
+					</td>
+					<td class="c"></td>
+					<td class="a">
+						<img src = "mysql.png" alt="MySQL">
+					</td>
+				</tr>
+				<tr>
+					<td class="b">Machine Learning</td>
+					<td class="c"></td>
+					<td class="b">JDBC</td>
+					<td class="c"></td>
+					<td class="b">Github</td>
+					<td class="c"></td>
+					<td class="b">JUnit Testing</td>
+					<td class="c"></td>
+					<td class="b">MySQL</td>
+				</tr>
+				<tr>
+					<td class="c"></td>
+					<td class="c"></td>
+					<td class="c"></td>
+					<td class="c"></td>
+					<td class="c"></td>
+					<td class="c"></td>
+					<td class="c"></td>
+					<td class="c"></td>
+					<td class="c"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+<div class="row">
+	<!-- My Projects -->
+	<div class="headcard">
+		<h2 id="MyProjects">My Projects</h2>
+	</div>
+	<div class="card">
+		<br>
+		<table>
+			<tbody>
+				<tr>
+					<!--Image Block-->
+					<td class="expimage" rowspan="3" >
+						<img src="poise.jpg" alt="Poise" style="width:180px; vertical-align">
+					</td>
+					<!--Header Blocks-->
+					<td class="expheader" colspan="2"><b>Project Management System</b></td>
+					<!--Gap Block-->
+					<td style="width: 15px"></td>
+					<!--Image Block-->
+					<td class="expimage" rowspan="3" >
+						<img src = "taskManager.png" alt="Task Manager" style="width:180px; horizontal-align: middle">
+					</td>
+					<!--Header Blocks-->
+					<td class="expheader" colspan="2"><b>Task Manager</b></td>
+				</tr>
+				<tr>
+					<td class="expsubhead1">Java</td>
+					<td class="expsubhead2"></td>
+					<!--Gap Block-->
+					<td style="width: 15px"></td>
+					<td class="expsubhead1">Python</td>
+					<td class="expsubhead2"></td>
+				</tr>
+				<tr>
+					<td class="expmain" colspan="2">
+					This Java program interacts with a MYSQL database server and 
+					was designed for a structural engineering company to add, view and edit projects 
+					and/or their related details. <br>
+					</td>
+					<!--Gap Block-->
+					<td style="width: 15px"></td>
+					<td class="expmain" colspan="2">
+					This is a Python program which assists a team with the management of a list of
+					tasks. Tasks are stored in a text file. New Tasks can be added, existing tasks can be edited
+					and existing tasks can be marked as complete.<br>
+					</td>
+					
+				</tr>
+				<tr>
+					<td style="height: 15px"></td>
+				</tr>
+				<tr>
+					<!--Image Block-->
+					<td class="expimage" rowspan="3" >
+						<img src = "game.png" alt="Simple Game" style="width:180px; vertical-align">
+					</td>
+					<!--Header Blocks-->
+					<td class="expheader" colspan="2"><b>A Simple Game</b></td>
+					<!--Gap Block-->
+					<td style="width: 15px"></td>
+					<!--Image Block-->
+					<td class="expimage" rowspan="3" >
+						<img src = "finance.jpg" alt="Finance Calculator" style="width:160px; vertical-align">
+					</td>
+					<!--Header Blocks-->
+					<td class="expheader" colspan="2"><b>Finance Calculator</b></td>
+				</tr>
+				<tr>
+					<td class="expsubhead1">Pygame</td>
+					<td class="expsubhead2"></td>
+					<!--Gap Block-->
+					<td style="width: 15px"></td>
+					<td class="expsubhead1">Python</td>
+					<td class="expsubhead2"></td>
+					
+				</tr>
+				<tr>
+					<td class="expmain" colspan="2">
+					This program uses Pygame to generate a simple game. The game consists of enemies,
+					a player and a prize. The player must avoid the enemies and reach the prize to win.<br>
+					</td>
+					<!--Gap Block-->
+					<td style="width: 15px"></td>
+					<td class="expmain" colspan="2">
+					This Python program allows the user to calculate <em>total interest earned</em> 
+					on an investment or the <em>monthly repayment amount</em> on a home loan.<br>
+					</td>
+				</tr>				
+			</tbody>		
+		</table>
+		<p style="font-size:20px; text-align: center">Check out these projects here:</p>
+		<table>
+			<tbody>
+				<tr>
+					<td style="width:220px"></td>
+					<td class="d">
+						<img class="centre" src = "github.png" alt="Github">
+					</td>
+					<td style="width:220px"></td>
+				</tr>
+				<tr>
+					<td style="width:220px"></td>
+					<td class="e">
+						<a style="color:yellow; background-color: black" target="_blank" href="https://github.com/Lindsey-LB?tab=repositories">  Lindsey-LB  </a>
+					</td>
+					<td style="width:220px"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<div class="row">
+	<!-- Education -->
+	<div class="headcard">
+		<h2 id="Education">Education</h2>
+	</div>
+	<div class="card">
+		<table>
+			<tbody>
+				<tr>
+					<td class="a">
+						<img src = "hyperiondev2.png" alt="HyperionDev" style="width:250px; vertical-align; border-radius:10px; padding:3px">
+					</td>
+					<td class="c"></td>
+					<td class="a">
+						<img src = "CPUT.png" alt="CPUT" style="width:250px; vertical-align; border-radius:10px; padding:3px">
+					</td>
+					<td class="c"></td>
+					<td class="a">
+						<img src = "CPUT.png" alt="CPUT" style="width:250px; vertical-align; border-radius:10px; padding:3px">
+					</td>
+				</tr>
+				<tr>
+					<td class="b">Bootcamp: Software Engineering<br>2020</td>
+					<td class="c"></td>
+					<td class="b">Btech: Mechanical Engineering<br>2010</td>
+					<td class="c"></td>
+					<td class="b">ND: Mechanical Engineering<br>2009</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+<div class="row">
+	<!-- Work Experience -->
+    <div class="headcard">
+	<h2 id="Experience">Experience</h2>
+	</div>
+	<div class="card">
+		<table>
+			<tbody>
+				<tr>
+					<td class="expimage" rowspan="3" >
+						<img src="QA.png" alt="QAE" style="width:280px; vertical-align; border-radius: 10px">
+					</td>
+					<td class="expheader" colspan="2"><b>Quality Assurance Engineer</b></td>
+				</tr>
+				<tr>
+					<td class="expsubhead1">Indigo Brands</td>
+					<td class="expsubhead2">April 2016 - November 2020</td>
+				</tr>
+				<tr>
+					<td class="expmain" colspan="2">
+					As a QA Engineer, I lead the business through its transition
+					to Quality at Source Systems. This change project impacted all internal teams
+					and external suppliers of materials and goods.<br><br>
+					As a natural outcome of this transition, I also lead the reconstitution of the
+					Production QA and QC teams within this transition.<br><br> 
+					I monitored the success of implementation by identifying trends in customer 
+					and consumer complaints and implementing solutions to address root-causes.</td>
+				</tr>
+				<tr>
+					<td style="height: 15px"></td>
+				</tr>
+				<tr>
+					<td class="expimage" rowspan="3" >
+						<img src = "CI.jpg" alt="Lean Principles" style="width:280px; horizontal-align: middle; border-radius: 10px">
+					</td>
+					<td class="expheader" colspan="2"><b>Continuous Improvement Engineer</b></td>
+				</tr>
+				<tr>
+					<td class="expsubhead1">Indigo Brands</td>
+					<td class="expsubhead2">October 2013 - April 2016</td>
+				</tr>
+				<tr>
+					<td class="expmain" colspan="2">
+					As a CI Engineer, I lead the pilot program to implement Lean Manufacturing priciples such as 
+					5S, Teamwork, Visual Management and Focused Improvement.<br><br>
+					This pilot implementation involved customising and facilitating training workshops,
+					integrating Lean principles into existing processes and identifying short and 
+					long term improvement opportunities.<br><br>
+					Additionally, I initiated and managed two DMAIC projects for the elimination of major wastes.
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 15px"></td>
+				</tr>
+				<tr>
+					<td class="expimage" rowspan="3" >
+						<img src = "TL.jpg" alt="Team Leader" style="width:300px; vertical-align; border-radius: 10px">
+					</td>
+					<td class="expheader" colspan="2"><b>Production Shift Manager</b></td>
+				</tr>
+				<tr>
+					<td class="expsubhead1">Indigo Brands</td>
+					<td class="expsubhead2">July 2013 - September 2013</td>
+				</tr>
+				<tr>
+					<td class="expmain" colspan="2">
+					During my limited time as a Production Shift Manager, I was responsible
+					for managing staff, production and quality targets to ensure they were achieved.<br><br>
+					Where targets were not achieved, I performed simple (such as 5-why) and complex
+					 (such as cause-and-effect diagrams and DMAIC) problem-solving to address barriers to 
+					 achieving team targets.<br><br> 
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 15px"></td>
+				</tr>
+				<tr>
+					<td class="expimage" rowspan="3" >
+						<img src = "process.png" alt="Processes" style="width:300px; vertical-align; border-radius: 10px">
+					</td>
+					<td class="expheader" colspan="2"><b>Process Controller</b></td>
+				</tr>
+				<tr>
+					<td class="expsubhead1">Indigo Brands</td>
+					<td class="expsubhead2">May 2011 - June 2013</td>
+				</tr>
+				<tr>
+					<td class="expmain" colspan="2">
+					As a Process Controller, I formed part of a team of Mechanical Engineers responsible
+					for the commissioning of a new high-speed, aerosol production line acquired by the 
+					business.<br><br>
+					This role included responsibility for the development of efficient and effective processes and 
+					procedures for continuous operation of the production line.
+					</td>
+				</tr>
+				<tr>
+					<td style="height: 15px"></td>
+				</tr>
+			</tbody>		
+		</table>
+	</div>
+</div>
+<div class="row">
+	<!-- Contact Me -->
+	<div class="headcard">
+		<h2 id="ContactMe">Contact Me</h2>
+	</div>
+	<div class="card">
+		<table>
+			<tbody>
+				<tr>
+					<td class="a">
+						<figure>
+							<img src = "Mail-icon.png" alt="Email">
+						</figure>
+					</td>
+					<td class="c"></td>
+					<td class="a">
+						<figure>
+							<img src = "phone.png" alt="Telephone">
+						</figure>
+					</td>
+					<td class="c"></td>
+					<td class="a">
+						<figure>
+							<img src = "Linkedin-icon.png" alt="LinkedIn">
+						</figure>
+					</td>
+				</tr>
+				<tr>
+					<td class="b"><a href="mailto: lindsey_benjamin@hotmail.com" style="color: yellow">Send Email</a></td>
+					<td class="c"></td>
+					<td class="b">0732807522</td>
+					<td class="c"></td>
+					<td class="b"><a target = "_blank" href="https://www.linkedin.com/in/lindsey-benjamin-lb/" style="color: yellow">Lindsey Benjamin</a></td>
+				</tr>
+			</tbody>
+		</table>
+		
+	</div>
+</div>
+<div class="row">
+	<div class="headcard"></div>
+</div>
+<div class="row">
+	<!-- Footer -->
+	<div class="footer">
+		<div>Some icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+	</div>
+</div>
+</body>
+</html>
