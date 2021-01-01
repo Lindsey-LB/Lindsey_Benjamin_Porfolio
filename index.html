@@ -23,6 +23,12 @@ body, html {
 	background-position: center;
 }
 
+/* Set responsiveness for images */
+img {
+	max-width: 100%;
+	height: auto;
+}
+
 /* Header Section*/
 .header {
   padding-top: 10px;
@@ -79,7 +85,8 @@ body, html {
 .card {
   background-image: url("y-so-serious-white.png");
   padding: 20px;
-  width: 70%;
+  max-width: 80%;
+  height: auto;
   margin: auto;
   border-color: black;
   border-style: solid;
@@ -90,13 +97,17 @@ body, html {
 /* Style text-wrap image for About section */
 .textwrap {
 	display: block;
-	margin: 15px;
-	float: right;
+	margin-right: 25px;
+	margin-left: 25px;
+	float: left;
 	width: 250px;
+	max-width: 100%;
+	height: auto;
 	border-radius: 125px 125px 125px 125px;
 	border-style: solid;
 	border-color: white;
 	border-width: 5px;
+	margin-top: 0;
 }
 
 /* Style github link button for Projects section */
@@ -104,7 +115,8 @@ body, html {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	width: auto;
+	max-width: 100%;
+	height: auto;
 	padding: 3px;
 }
 
@@ -113,7 +125,8 @@ in Skills and Contact sections */
 figure {
 	padding: 4px;
 	margin-top: 5px;
-	height: 64px;
+	height: auto;
+	max-width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -121,8 +134,8 @@ figure {
 /* Table styling in "main" cards */
 table {
 	border-spacing: 0;
-	width: 95%;
-	height: 95%;
+	max-width: 95%;
+	height: auto;
 	min-width: 150px;
 	margin-left: auto;
 	margin-right: auto;
@@ -130,7 +143,8 @@ table {
 
 /* Cell style for icon in table */	
 .a {
-	width: auto;
+	width: 250px;
+	max-width: 100%;
 	background-color: white;
 	height: auto;
 	text-align: center;
@@ -145,11 +159,12 @@ table {
 
 /* Cell style for text in table */	
 .b {
-	width: 150px;
+	width: 250px;
+	max-width: 100%;
 	text-align: center;
-	font-size: 18px;
+	font-size: 16px;
 	color: white;
-	height: 40px;
+	height: auto;
 	margin-bottom: 20px;
 	border-radius: 0px 0px 10px 10px;
 	background-image: url("y-so-serious.png");
@@ -162,15 +177,15 @@ table {
 
 /* Cell style for gap in table */	
 .c {
-	width: 10px;
-	min-width: 10px;
-	min-height: 10px;
-	height: 10px;
+	width: 20px;
+	min-width: 2px;
+	min-height: 2px;
+	height: 20px;
 }
 
 /* Cell styling for icon of github link table */
 .d {
-	width: 50px;
+	max-width: 100%;
 	background-color: white;
 	height: auto;
 	text-align: center;
@@ -185,11 +200,11 @@ table {
 
 /* Cell styling for link of github link table */
 .e {
-	width: 50px;
+	max-width: 100%;
 	text-align: center;
 	font-size: 18px;
 	color: white;
-	height: 40px;
+	height: auto;
 	margin-bottom: 20px;
 	border-radius: 0px 0px 10px 10px;
 	background-image: url("y-so-serious.png");
@@ -197,30 +212,35 @@ table {
 	border-left-style: groove;
 	border-right-style: groove;
 	border-color: #323232;
-	padding: 3px;
+	padding: 5px;
 }
 
 /* Cell style for image in table (Experience/Projects) */	
 .expimage {
-	width:auto; 
+	max-width:100%; 
+	width: 200px;
 	height:auto; 
-	border-bottom-style:groove;
 	border-top-style:groove;
 	border-left-style:groove;
-	border-radius: 10px 0px 0px 10px;
+	border-right-style:groove;
+	border-bottom-style:groove;
+	border-top-color: black;
+	border-right-color: black;
+	border-left-color: black;
+	border-bottom-color: white;
+	border-radius: 10px 10px 0px 0px;
 	text-align: center;
 	vertical-align: center;
 	padding: 5px;
+	background-image: url("y-so-serious.png");
 }
 
 /* Cell style for heading in table (Experience/Projects) */
 .expheader {
 	font-size:18px; 
 	height:20px;
-	border-top-style:groove;
 	border-right-style:groove;
 	border-left-style:groove;
-	border-radius: 0px 10px 0px 0px;
 	padding-top: 5px;
 	padding-left: 5px;
 	padding-right: 5px;
@@ -233,7 +253,7 @@ table {
 .expsubhead1 {
 	font-size:16px;
 	text-align:left;
-	width:150px;	
+	max-width:100%;	
 	height:17px;
 	border-left-style:groove;
 	font-style: italic;
@@ -254,6 +274,7 @@ table {
 	border-color: black;
 	color: white;
 	background-image: url("y-so-serious.png");
+	max-width: 100%;
 }
 
 /* Cell style for main summary in table (Experience/Projects) */
@@ -262,9 +283,12 @@ table {
 	border-right-style:groove;
 	border-bottom-style:groove;
 	border-left-style:groove;
-	border-radius: 0px 0px 10px 0px;
+	border-radius: 0px 0px 10px 10px;
 	padding: 5px;
 	background-color: white;
+	max-width: 100%;
+	height: auto;
+	width: 500px;
 }	
 
 /* Clear floats after the columns */
@@ -316,9 +340,8 @@ table {
 	</div>
 	<div class="card">
 		<img src = "profile2.jpg" alt="Lindsey Benjamin" class="textwrap">
-		<br>
 		<p style="font-size:18px">
-		Hi! My name is <b>Lindsey</b>. I am an aspiring Software Developer who is passionate about 
+		Hello! My name is <b>Lindsey</b>. I am an aspiring Software Developer who is passionate about 
 		pursuing a career in the tech industry, with the intent to apply and expand current 
 		problem-solving and critical thinking skills in space which encourages innovation 
 		and collaboration. 
@@ -339,6 +362,7 @@ table {
 		<h2 id="MySkills">Skills</h2>
 	</div>
 	<div class="card">
+		<div style="oveflow-x: auto;">
 		<table>
 			<tbody>
 				<tr>
@@ -416,19 +440,9 @@ table {
 					<td class="c"></td>
 					<td class="b">MySQL</td>
 				</tr>
-				<tr>
-					<td class="c"></td>
-					<td class="c"></td>
-					<td class="c"></td>
-					<td class="c"></td>
-					<td class="c"></td>
-					<td class="c"></td>
-					<td class="c"></td>
-					<td class="c"></td>
-					<td class="c"></td>
-				</tr>
 			</tbody>
 		</table>
+		</div>
 	</div>
 </div>
 <div class="row">
@@ -442,25 +456,25 @@ table {
 			<tbody>
 				<tr>
 					<!--Image Block-->
-					<td class="expimage" rowspan="3" >
+					<td class="expimage" colspan="2" >
 						<img src="poise.jpg" alt="Poise" style="width:180px; vertical-align">
 					</td>
-					<!--Header Blocks-->
-					<td class="expheader" colspan="2"><b>Project Management System</b></td>
 					<!--Gap Block-->
-					<td style="width: 15px"></td>
+					<td style="min-width: 15px" rowspan="9"></td>
 					<!--Image Block-->
-					<td class="expimage" rowspan="3" >
+					<td class="expimage" colspan="2" >
 						<img src = "taskManager.png" alt="Task Manager" style="width:180px; horizontal-align: middle">
 					</td>
+				</tr>
+				<tr>
 					<!--Header Blocks-->
+					<td class="expheader" colspan="2"><b>Project Management System</b></td>
 					<td class="expheader" colspan="2"><b>Task Manager</b></td>
 				</tr>
 				<tr>
+					<!--Subheader Blocks-->
 					<td class="expsubhead1">Java</td>
 					<td class="expsubhead2"></td>
-					<!--Gap Block-->
-					<td style="width: 15px"></td>
 					<td class="expsubhead1">Python</td>
 					<td class="expsubhead2"></td>
 				</tr>
@@ -470,8 +484,6 @@ table {
 					was designed for a structural engineering company to add, view and edit projects 
 					and/or their related details. <br>
 					</td>
-					<!--Gap Block-->
-					<td style="width: 15px"></td>
 					<td class="expmain" colspan="2">
 					This is a Python program which assists a team with the management of a list of
 					tasks. Tasks are stored in a text file. New Tasks can be added, existing tasks can be edited
@@ -484,36 +496,31 @@ table {
 				</tr>
 				<tr>
 					<!--Image Block-->
-					<td class="expimage" rowspan="3" >
+					<td class="expimage" colspan="2" >
 						<img src = "game.png" alt="Simple Game" style="width:180px; vertical-align">
 					</td>
-					<!--Header Blocks-->
-					<td class="expheader" colspan="2"><b>A Simple Game</b></td>
-					<!--Gap Block-->
-					<td style="width: 15px"></td>
-					<!--Image Block-->
-					<td class="expimage" rowspan="3" >
+					<td class="expimage" colspan="2" >
 						<img src = "finance.jpg" alt="Finance Calculator" style="width:160px; vertical-align">
 					</td>
+				</tr>
+				<tr>
 					<!--Header Blocks-->
+					<td class="expheader" colspan="2"><b>A Simple Game</b></td>
 					<td class="expheader" colspan="2"><b>Finance Calculator</b></td>
+					
 				</tr>
 				<tr>
 					<td class="expsubhead1">Pygame</td>
 					<td class="expsubhead2"></td>
-					<!--Gap Block-->
-					<td style="width: 15px"></td>
 					<td class="expsubhead1">Python</td>
 					<td class="expsubhead2"></td>
-					
 				</tr>
 				<tr>
 					<td class="expmain" colspan="2">
 					This program uses Pygame to generate a simple game. The game consists of enemies,
 					a player and a prize. The player must avoid the enemies and reach the prize to win.<br>
 					</td>
-					<!--Gap Block-->
-					<td style="width: 15px"></td>
+
 					<td class="expmain" colspan="2">
 					This Python program allows the user to calculate <em>total interest earned</em> 
 					on an investment or the <em>monthly repayment amount</em> on a home loan.<br>
@@ -584,14 +591,23 @@ table {
 		<table>
 			<tbody>
 				<tr>
-					<td class="expimage" rowspan="3" >
+					<td class="expimage" colspan="2">
 						<img src="QA.png" alt="QAE" style="width:280px; vertical-align; border-radius: 10px">
 					</td>
+					<td style="min-width: 15px" rowspan="4"></td>
+					<td class="expimage" colspan="2">
+						<img src = "CI.jpg" alt="Lean Principles" style="width:280px; horizontal-align: middle; border-radius: 10px">
+					</td>
+				</tr>
+				<tr>
 					<td class="expheader" colspan="2"><b>Quality Assurance Engineer</b></td>
+					<td class="expheader" colspan="2"><b>Continuous Improvement Engineer</b></td>
 				</tr>
 				<tr>
 					<td class="expsubhead1">Indigo Brands</td>
 					<td class="expsubhead2">April 2016 - November 2020</td>
+					<td class="expsubhead1">Indigo Brands</td>
+					<td class="expsubhead2">October 2013 - April 2016</td>
 				</tr>
 				<tr>
 					<td class="expmain" colspan="2">
@@ -602,21 +618,7 @@ table {
 					Production QA and QC teams within this transition.<br><br> 
 					I monitored the success of implementation by identifying trends in customer 
 					and consumer complaints and implementing solutions to address root-causes.</td>
-				</tr>
-				<tr>
-					<td style="height: 15px"></td>
-				</tr>
-				<tr>
-					<td class="expimage" rowspan="3" >
-						<img src = "CI.jpg" alt="Lean Principles" style="width:280px; horizontal-align: middle; border-radius: 10px">
-					</td>
-					<td class="expheader" colspan="2"><b>Continuous Improvement Engineer</b></td>
-				</tr>
-				<tr>
-					<td class="expsubhead1">Indigo Brands</td>
-					<td class="expsubhead2">October 2013 - April 2016</td>
-				</tr>
-				<tr>
+					
 					<td class="expmain" colspan="2">
 					As a CI Engineer, I lead the pilot program to implement Lean Manufacturing priciples such as 
 					5S, Teamwork, Visual Management and Focused Improvement.<br><br>
@@ -630,38 +632,32 @@ table {
 					<td style="height: 15px"></td>
 				</tr>
 				<tr>
-					<td class="expimage" rowspan="3" >
+					<td class="expimage" colspan="2">
 						<img src = "TL.jpg" alt="Team Leader" style="width:300px; vertical-align; border-radius: 10px">
 					</td>
+					<td style="width: 5px" rowspan="4"></td>
+					<td class="expimage" colspan="2" >
+						<img src = "process.png" alt="Processes" style="width:300px; vertical-align; border-radius: 10px">
+					</td>
+				</tr>
+				<tr>
 					<td class="expheader" colspan="2"><b>Production Shift Manager</b></td>
+					<td class="expheader" colspan="2"><b>Process Controller</b></td>
 				</tr>
 				<tr>
 					<td class="expsubhead1">Indigo Brands</td>
 					<td class="expsubhead2">July 2013 - September 2013</td>
+					<td class="expsubhead1">Indigo Brands</td>
+					<td class="expsubhead2">May 2011 - June 2013</td>
 				</tr>
 				<tr>
 					<td class="expmain" colspan="2">
-					During my limited time as a Production Shift Manager, I was responsible
+					During my time as a Production Shift Manager, I was responsible
 					for managing staff, production and quality targets to ensure they were achieved.<br><br>
 					Where targets were not achieved, I performed simple (such as 5-why) and complex
 					 (such as cause-and-effect diagrams and DMAIC) problem-solving to address barriers to 
 					 achieving team targets.<br><br> 
 					</td>
-				</tr>
-				<tr>
-					<td style="height: 15px"></td>
-				</tr>
-				<tr>
-					<td class="expimage" rowspan="3" >
-						<img src = "process.png" alt="Processes" style="width:300px; vertical-align; border-radius: 10px">
-					</td>
-					<td class="expheader" colspan="2"><b>Process Controller</b></td>
-				</tr>
-				<tr>
-					<td class="expsubhead1">Indigo Brands</td>
-					<td class="expsubhead2">May 2011 - June 2013</td>
-				</tr>
-				<tr>
 					<td class="expmain" colspan="2">
 					As a Process Controller, I formed part of a team of Mechanical Engineers responsible
 					for the commissioning of a new high-speed, aerosol production line acquired by the 
@@ -669,9 +665,6 @@ table {
 					This role included responsibility for the development of efficient and effective processes and 
 					procedures for continuous operation of the production line.
 					</td>
-				</tr>
-				<tr>
-					<td style="height: 15px"></td>
 				</tr>
 			</tbody>		
 		</table>
